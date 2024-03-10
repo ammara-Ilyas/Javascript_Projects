@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="textBox" type="text" />
+<div id="output"></div>
+
+
+<script>
+let x=document.getElementById("textBox");
+// x.addEventListener("click",function fun(){
+//     x.style.backgroundColor="blue"
+//     x.style.color="white"
+//     x.style.fontSize="28px"
+//     x.style.padding="20px"
+//     x.style.border="2px solid red"
+//     x.style.borderRadius="50px"
+
+//     // alert("its not good")
+// });
+x.addEventListener("change",function myfun(){
+    console.log(this.value)
+})
+x.addEventListener("input",function th(){
+    console.log(this.value)
+})
+
+// function myfunction(){
+//     x.style.backgroundColor="blue"
+//     // alert("its not good")
+// }
+// x.addEventListener("mouseleave",youfunction)
+// function youfunction(){
+//     x.style.backgroundColor="white"
+//     x.style.padding="0px"
+//     x.style.border="2px solid"
+//     x.style.color="black"
+
+
+// }
+    </script>
+</body>
+</html>

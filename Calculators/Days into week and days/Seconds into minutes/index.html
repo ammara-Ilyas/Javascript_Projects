@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="responsive.css" />
+    <style>
+      .container {
+        height: 90vh;
+      }
+      .con {
+        border: 2px solid;
+        display: flex;
+        justify-content: center;
+        height: 50%;
+      }
+      .input {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+      }
+      .input input {
+        font-size: 20px;
+        padding: 20px;
+        border-radius: 25px;
+      }
+      .for {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="con">
+        <div class="input">
+          Minutes
+          <input type="text" value="0" id="min" />
+        </div>
+        <div class="input">
+          Seconds
+          <input type="text" value="0" id="sec" />
+        </div>
+      </div>
+      <div class="for" id="formula">
+        <h4></h4>
+      </div>
+    </div>
+    <script>
+      let min = document.getElementById("min");
+      var sec = document.getElementById("sec");
+      var formula = document.getElementById("formula");
+
+      min.addEventListener("input", function () {
+        let minute = min.value;
+        let s = sec.value;
+
+        let second = minute * 60;
+        sec.value = second;
+
+        formula.innerHTML = `${minute} minute = ${second}*60`;
+      });
+
+      sec.addEventListener("input", function () {
+        let second = sec.value;
+        let m = min.value;
+
+        let minute = second / 60;
+        min.value = minute;
+
+        formula.innerHTML = `${minute} minutes = ${second}/60`;
+      });
+    </script>
+  </body>
+</html>

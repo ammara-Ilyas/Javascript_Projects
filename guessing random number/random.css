@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(34, 32, 32, 0.9);
+  color: white;
+  height: 100vh;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+#inp {
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+}
+#btn {
+  padding: 10px;
+  border-radius: 25px;
+  margin: 10px;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        h1{
+            display: grid;
+            place-items: center;
+            font-size: 38px;
+        }
+        .container{
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px;
+            font-size: 38px;
+            background-color: aliceblue;
+            width: 90vw;
+        }
+        .inputCon{
+            display: grid;
+            grid-gap: 10px;
+        }
+        input{
+            width: 80%;
+            padding: 15px;
+            font-size: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        #for{
+            transform: translateX(20%);
+            font-size: 20px;
+            /* display: none; */
+        }
+    </style>
+</head>
+<body>
+    <h1>Tempreture Converter</h1>
+    <div class="container">
+        <div class="inputCon">
+            <label for="tem">Celsius</label>
+            <input type="Number" value="0" id="tem">
+        </div>
+        <div class="inputCon"> 
+            <label for="far">Farenhiet</label>          
+             <input type="Number" value="32" id="far">
+        </div>
+    </div>
+    <div id="for">
+        <h5>Formula</h5>
+    </div>
+    
+
+    <script>
+        var tem=document.getElementById("tem");
+        var far=document.getElementById("far");
+        tem.addEventListener("input",function(){
+            var t=tem.value;
+            var fah=(t * 9/5) + 32;
+            far.value=fah;
+            document.getElementById("for").innerHTML = `${far.value}F = (${tem.value} * 9/5) + 32`;
+        });
+        far.addEventListener("input",function(){
+            var f=far.value;
+            var te=(f -32) * 5/9;
+            tem.value=te;
+            document.getElementById("for").innerHTML = `${far.value}F = (${tem.value} * 9/5) + 32`;
+        });
+        document.getElementById("for").innerHTML = `${far.value}F = (${tem.value} * 9/5) + 32`;
+
+        
+    </script>
+</body>
+</html>

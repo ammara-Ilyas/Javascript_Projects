@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background changer</title>
+    <style>
+      body {
+        width: 90vw;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        width: 60%;
+      }
+      .container img {
+        width: 100%;
+      }
+      .container h2 {
+        text-align: center;
+        text-decoration: underline;
+      }
+      .btn {
+        width: 30px;
+        height: 30px;
+        border: 2px solid rgb(150, 147, 147, 0.2);
+        border-radius: 50%;
+      }
+      .btn:nth-child(1) {
+        background-color: #dc143c;
+      }
+      .btn:nth-of-type(2) {
+        background-color: red;
+      }
+      .btn:nth-of-type(3) {
+        background-color: blue;
+      }
+      .btn:nth-of-type(4) {
+        background-color: green;
+      }
+      .btn:nth-child(5) {
+        background-color: #ffd700;
+      }
+      .btn:nth-child(6) {
+        background-color: #00ff00;
+      }
+      .btn:nth-child(7) {
+        background-color: #ffff00;
+      }
+      .btn:nth-child(8) {
+        background-color: #800080;
+      }
+
+      .color {
+        display: block;
+        text-align: end;
+        padding-right: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="color">
+      <button class="btn" id="white" onclick="changColor('#dc143c')"></button>
+      <button class="btn" id="red" onclick="changColor('#FF0000')"></button>
+      <button class="btn" id="blue" onclick="changColor('#0000FF')"></button>
+      <button class="btn" id="green" onclick="changColor('#199119')"></button>
+      <button
+        class="btn"
+        id="yellowGreen"
+        onclick="changColor('#ffd700')"
+      ></button>
+      <button class="btn" id="parrot" onclick="changColor('#00FF00	')"></button>
+      <button class="btn" id="yellow" onclick="changColor('#FFFF00')"></button>
+      <button class="btn" id="purple" onclick="changColor('#800080	')"></button>
+    </div>
+    <div class="container">
+      <h2>About us</h2>
+      <img src="img.jpg" alt="" />
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam totam
+        nobis, soluta perferendis maiores quae. Possimus incidunt officia, totam
+        animi at pariatur consequuntur perspiciatis sit itaque similique ratione
+        labore ipsum voluptas nobis ea nam? Corrupti voluptate dignissimos
+        consectetur cum ullam nisi dolorum perspiciatis quo, enim autem atque
+        aliquid doloremque voluptatum iusto inventore obcaecati impedit facilis!
+        Quo quibusdam facilis amet aut facere atque ut mollitia minus, cumque
+        officia veritatis, esse eligendi consequuntur possimus pariatur dolores
+        numquam quas quam ipsam ad sapiente dolorum blanditiis! Harum illo unde
+        nihil, reiciendis tenetur illum eveniet eos ea eum commodi sapiente
+        laudantium, ad doloremque veritatis Lorem ipsum, dolor sit amet
+        consectetur adipisicing elit. Id nam recusandae repudiandae inventore
+        neque facilis provident laudantium fugiat aliquid amet a, odio deleniti
+        commodi doloribus culpa. Magni aliquam reiciendis quos ullam optio
+        eveniet laborum facere eos officia expedita. Facere a repudiandae,
+        corrupti alias, porro rem est eum quis voluptatum necessitatibus sit, ea
+        rerum impedit quas maiores doloremque voluptas asperiores magni ipsum?
+        Blanditiis eligendi, possimus delectus, commodi suscipit tempore illum
+        porro quis animi cupiditate autem iure consequuntur quam. Asperiores
+        soluta ad fuga placeat exercitationem eaque eum doloribus sint
+        laudantium minus saepe quos doloremque velit iure aliquam quidem, esse
+        architecto reiciendis eius!
+      </p>
+    </div>
+    <script>
+      // one way
+      let body = document.body;
+      function changColor(color) {
+        body.style.backgroundColor = color;
+      }
+    </script>
+  </body>
+</html>

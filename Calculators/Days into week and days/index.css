@@ -1,0 +1,46 @@
+/* {var --primary="black"} */
+.container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#input {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  margin: 10px;
+  font-size: 30px;
+}
+#input input {
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 30px;
+}
+#for {
+  font-size: 40px;
+  text-align: center;
+}
+@media only screen and (max-width: 900px) {
+  .con {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #input input {
+    width: 50%;
+  }
+  #for {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+  }
+}

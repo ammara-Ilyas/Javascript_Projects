@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+      }
+      #con {
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+      }
+      #input {
+        height: 200px;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        font-size: 48px;
+        width: 30%;
+      }
+      #input input {
+        padding: 50px 20px;
+        border-radius: 25px;
+        margin-top: 40px;
+        font-size: 48px;
+      }
+      #ans {
+        font-size: 72px;
+        text-align: center;
+      }
+      @media screen and (max-width: 900) {
+        #input input {
+          margin-top: 30px;
+        }
+        #con {
+          font-size: 28px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="con">
+        <div id="input">
+          Obtain Marks
+          <input type="text" value="0" id="obtain" />
+        </div>
+        <div id="input">
+          Total Marks
+          <input type="text" value="0" id="total" />
+        </div>
+      </div>
+      <div id="ans">
+        <h2></h2>
+      </div>
+    </div>
+    <script>
+      "use strict";
+      let obtain = document.getElementById("obtain");
+      let total = document.getElementById("total");
+      let ans = document.getElementById("ans");
+      let ans2 = document.getElementById("ans2");
+      // let btn=document.getElementById("btn");
+      obtain.addEventListener("input", calculation);
+      total.addEventListener("input", calculation);
+      function calculation() {
+        let o = parseInt(obtain.value);
+        let t = parseInt(total.value);
+        if (!isNaN(o) && !isNaN(t) && t !== 0) {
+          let percnt = (o / t) * 100;
+          ans.innerHTML = `${Math.round(percnt)}%`;
+        }
+      }
+    </script>
+  </body>
+</html>

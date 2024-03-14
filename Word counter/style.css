@@ -1,0 +1,23 @@
+.container {
+  font-weight: bold;
+}
+h1 {
+  text-align: center;
+  background-color: rgb(53, 53, 231);
+  padding: 10px;
+  margin: 0;
+  color: white;
+}
+textarea {
+  width: 99.3%;
+  font-size: 15px;
+  border: 1.5px solid rgb(53, 53, 231);
+}
+p {
+  font-size: 25px;
+  background-color: rgb(53, 53, 231);
+  padding: 10px;
+  margin: 0;
+  color: white;
+  text-align: center;
+}
